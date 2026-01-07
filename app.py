@@ -7,7 +7,7 @@ import time
 # --- Page Config ---
 st.set_page_config(
     page_title="AI News Dashboard",
-    page_icon="🤖",
+    page_icon="〄",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -49,91 +49,100 @@ st.markdown(
         letter-spacing: 0.5px;
     }
 
-    /* Card Styling - Uniform Size */
+    /* Card Styling - Compact & Sleek */
     .news-card {
         background-color: #161b22;
         border: 1px solid #30363d;
-        border-radius: 12px;
-        padding: 24px;
-        height: 340px; /* Fixed height for uniformity */
+        border-radius: 8px; /* Slightly sharper corners */
+        padding: 1.25rem;
+        height: 260px; /* Reduced height */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         position: relative;
         overflow: hidden;
     }
     
     .news-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 114, 255, 0.15); /* Blue glow on hover */
         border-color: #0072ff;
     }
 
-    /* Title Truncation */
+    /* Title Styling */
     .news-title {
         color: #ffffff;
         font-family: 'Rajdhani', sans-serif;
         font-weight: 700;
-        font-size: 1.25rem;
-        margin-bottom: 12px;
-        line-height: 1.3;
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
         
         display: -webkit-box;
-        -webkit-line-clamp: 2; /* Limit to 2 lines */
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     
-    /* Summary Truncation */
+    /* Summary Styling */
     .news-summary {
         color: #8b949e;
-        font-size: 0.9rem;
-        line-height: 1.6;
-        margin-bottom: auto; /* Push meta to bottom */
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: auto;
         
         display: -webkit-box;
-        -webkit-line-clamp: 3; /* Limit to 3 lines */
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     
+    /* Meta & Action Area */
     .news-meta {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 20px;
-        padding-top: 15px;
-        border-top: 1px solid #30363d;
+        margin-top: 1rem;
+        padding-top: 0; /* Removed padding */
+        border-top: none; /* Removed border */
     }
 
     .news-date {
-        color: #58a6ff;
-        font-size: 0.8rem;
+        color: #484f58;
+        font-size: 0.75rem;
+        font-family: 'Rajdhani', sans-serif;
         font-weight: 600;
+        letter-spacing: 1px;
     }
 
+    /* Minimalist Button */
     .read-more-btn {
         display: inline-flex;
         align-items: center;
-        padding: 8px 16px;
-        background: rgba(0, 114, 255, 0.1);
-        border: 1px solid rgba(0, 114, 255, 0.3);
+        justify-content: center;
+        padding: 6px 12px;
+        background: transparent;
+        border: 1px solid #30363d;
         color: #58a6ff !important;
         text-decoration: none !important;
-        border-radius: 6px;
-        font-size: 0.85rem;
-        font-weight: 600;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        font-family: 'Rajdhani', sans-serif;
+        letter-spacing: 1px;
         transition: all 0.2s ease;
+        text-transform: uppercase;
     }
 
     .read-more-btn:hover {
-        background: #0072ff;
+        background: rgba(0, 114, 255, 0.1);
+        border-color: #58a6ff;
         color: #ffffff !important;
-        border-color: #0072ff;
+        box-shadow: 0 0 10px rgba(0, 114, 255, 0.2);
     }
     
     /* Sidebar Styling */
